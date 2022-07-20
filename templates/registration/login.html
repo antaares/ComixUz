@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+{% block title %}Kirish{% endblock title %}
+
+{% block content %}
+    <h2>Saytga kirish</h2>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="button">Kirish</button>
+    </form>
+{% endblock content %}
