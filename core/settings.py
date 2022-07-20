@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts',
     'pages',
+    'articles',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,6 @@ LOGIN_REDIRECT_URL = 'home' # reverse('home')
 LOGOUT_REDIRECT_URL = 'home' # 'accounts:login'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#  media files
+MEDIA = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
