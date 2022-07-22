@@ -140,4 +140,4 @@ LOGOUT_REDIRECT_URL = 'home' # 'accounts:login'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 #  media files
 MEDIA = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
