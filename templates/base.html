@@ -1,4 +1,9 @@
 {% load static %}
+
+{% block extrahead %}
+    <script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
+    {{ block.super }}
+{% endblock %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,8 +16,8 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4B41A;">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="/static/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                SariqDEV Blog
+                <img src="/static/images/ComixUz.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                ComixUz
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -31,7 +36,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-lg-right"
                                 aria-labelledby="navbarDropdown">
-{#                                <a class="dropdown-item" href="{% url 'article_new' %}">Yangi post</a>#}
+                                <a class="dropdown-item" href="{% url 'article_new' %}">Yangi post</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{% url 'password_change'%}">Kalit so'zni almashtirish</a>
                                 <div class="dropdown-divider"></div>
