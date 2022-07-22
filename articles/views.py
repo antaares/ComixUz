@@ -19,9 +19,9 @@ class ArticleUpdateView(UpdateView):
     fields = ('title','summary', 'body','photo',)
     template_name = 'article_edit.html'
 
-    # def test_func(self):
-    #     obj = self.get_object()
-    #     return obj.author == self.request.user
+    def test_func(self):
+        obj = self.get_object()
+        return obj.author == self.request.user
 
 class ArticleDeleteView(DeleteView):
     model = Article
